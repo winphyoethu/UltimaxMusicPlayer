@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ivPlaylist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_playlist"
+        app:layout_constraintBottom_toBottomOf="@id/tvPlaylistSongCount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvPlaylistTitle"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/tvPlaylistTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/jost_regular"
+        android:text="DICK"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/ivPlaylist"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPlaylistSongCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/jost_regular"
+        android:text="0 songs . 00:00"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/ivPlaylist"
+        app:layout_constraintTop_toBottomOf="@id/tvPlaylistTitle" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvgg"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="GG"-->
+<!--        android:textColor="@color/white"-->
+<!--        app:layout_constrainedWidth="true"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/tvgg1"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tvPlaylistSongCount" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvgg1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:text="GG1"-->
+<!--        android:textColor="@color/white"-->
+<!--        app:layout_constrainedWidth="true"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/tvgg2"-->
+<!--        app:layout_constraintStart_toEndOf="@id/tvgg"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tvPlaylistSongCount" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvgg2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="GG1"-->
+<!--        android:textColor="@color/white"-->
+<!--        app:layout_constrainedWidth="true"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@id/tvgg1"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tvPlaylistSongCount" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.winphyoethu.ultimaxmusic.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_playlist_dialog"
+            app:destination="@+id/navigation_playlist_dialog">
+            <argument
+                android:name="songId"
+                android:defaultValue="-1"
+                app:argType="integer" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.winphyoethu.ultimaxmusic.ui.playlist.PlaylistFragment"
+        android:label="@string/title_playlist"
+        tools:layout="@layout/fragment_playlist">
+        <action
+            android:id="@+id/action_navigation_dashboard_to_navigation_create_playlist_dialog"
+            app:destination="@id/navigation_create_playlist_dialog" />
+
+        <action
+            android:id="@+id/action_navigation_dashboard_to_navigation_playlist_song"
+            app:destination="@id/navigation_playlist_song">
+            <argument
+                android:name="playlistId"
+                android:defaultValue="-1"
+                app:argType="integer" />
+            <argument
+                android:name="playlistTitle"
+                android:defaultValue=""
+                app:argType="string"/>
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.winphyoethu.ultimaxmusic.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_playlist_song"
+        android:name="com.winphyoethu.ultimaxmusic.ui.playlistsong.PlaylistSongFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_playlist_song">
+        <argument
+            android:name="playlistId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <argument
+            android:name="playlistTitle"
+            android:defaultValue=""
+            app:argType="string"/>
+    </fragment>
+
+    <dialog
+        android:id="@+id/navigation_create_playlist_dialog"
+        android:name="com.winphyoethu.ultimaxmusic.ui.createplaylist.CreatePlaylistDialogFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_create_playlist_dialog" />
+
+    <dialog
+        android:id="@+id/navigation_playlist_dialog"
+        android:name="com.winphyoethu.ultimaxmusic.ui.playlistdialog.PlaylistDialogFragment"
+        android:label="Playlist Dialog"
+        tools:layout="@layout/fragment_create_playlist_dialog">
+        <argument
+            android:name="songId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </dialog>
+
+</navigation>
